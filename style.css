@@ -45,7 +45,7 @@ header nav a {
 .hero {
   background: url('images/justice.jpg') no-repeat center top; /* align image to top */
   background-size: cover; /* fill container, crop bottom if needed */
-  background-position: center 20%; /* shift image slightly down */
+  background-position: center 36%; /* shift image slightly down */
   color: #fff;
   text-align: center;
   padding: 80px 20px; /* space inside hero */
