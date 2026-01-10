@@ -43,13 +43,22 @@ header nav a {
 
 /* Hero Section */
 .hero {
-  background: url('images/justice.jpg') no-repeat center center; /* center horizontally and vertically */
-  background-size: cover; /* fill the container, crop if needed */
+  background: url('images/justice.jpg') no-repeat center top; /* align image to top */
+  background-size: cover; /* fill container, crop bottom if needed */
+  background-position: center 20%; /* shift image slightly down */
   color: #fff;
   text-align: center;
-  padding: 60px 40px; /* space inside the hero section */
-  height: 600px; /* adjust height as needed */
+  padding: 80px 20px; /* space inside hero */
+  height: 500px; /* adjust as needed */
 }
+
+@media (max-width: 768px) {
+  .hero {
+    height: 300px; /* reduce height on mobile */
+    background-position: center 25%; /* adjust vertical crop for smaller screens */
+  }
+}
+
 
 .hero h2 {
   font-size: 2.5em;
