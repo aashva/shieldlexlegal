@@ -47,8 +47,8 @@ header nav a {
   background-size: cover; /* fill the container, crop if needed */
   color: #fff;
   text-align: center;
-  padding: 80px 20px; /* space inside the hero section */
-  height: 500px; /* adjust height as needed */
+  padding: 60px 40px; /* space inside the hero section */
+  height: 600px; /* adjust height as needed */
 }
 
 .hero h2 {
