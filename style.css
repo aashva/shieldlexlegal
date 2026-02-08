@@ -293,6 +293,7 @@ img {
 }
 
 /* ===== Mobile Responsive ===== */
+
 @media (max-width: 768px) {
   .top-bar-content,
   .header-container {
@@ -339,21 +340,29 @@ img {
     background: rgba(0, 0, 0, 0.6);
   }
 
- @media (max-width: 768px) {
   .hero-content {
-    top: 20px;
-    left: 20px;
-    max-width: 90%;
+    top: 16px;
+    left: 16px;
+    max-width: 85%;
   }
 
   .hero h2 {
-    font-size: 1.7em;
+    font-size: 1.35em;      /* smaller heading */
+    font-weight: 500;       /* lighter weight */
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
   }
 
   .hero p {
-    font-size: 0.95em;
+    font-size: 0.85em;      /* much smaller body text */
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: #f2f2f2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
-}
 
   .hero-actions a {
     padding: 10px 18px;
