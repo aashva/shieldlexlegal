@@ -34,6 +34,14 @@
   </div>
 </div>
 
+  <div class="header-container">
+    <div class="logo">
+      <a href="https://www.shieldlexlegal.in">
+        <img src="images/logo.jpeg" alt="Shield Lex Legal Law Firm">
+      </a>
+    </div>
+    <h1>Shield Lex Legal -  सुरक्षा और मजबूती</h1>
+
 <!-- Header -->
 <header id="main-header">
   <div class="top-bar">
@@ -47,14 +55,6 @@
       </div>
     </div>
   </div>
-
-  <div class="header-container">
-    <div class="logo">
-      <a href="https://www.shieldlexlegal.in">
-        <img src="images/logo.jpeg" alt="Shield Lex Legal Law Firm">
-      </a>
-    </div>
-    <h1>Shield Lex Legal -  सुरक्षा और मजबूती</h1>
 
     <nav class="nav-menu">
       <a href="#home">Home</a>
@@ -191,11 +191,11 @@ Advocate Harshit Sharma is a well-rounded lawyer in Indore, providing services a
     }
   };
   
-  // // Sticky header on scroll
-  // window.addEventListener("scroll", function () {
-  //   const header = document.getElementById("main-header");
-  //   header.classList.toggle("sticky", window.scrollY > 50);
-  // });
+  // Sticky header on scroll
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("main-header");
+    header.classList.toggle("sticky", window.scrollY > 50);
+  });
   
   function acceptDisclaimer() {
     localStorage.setItem("disclaimerAccepted", "true");
