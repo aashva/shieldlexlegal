@@ -8,10 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="disclaimer-overlay">
+
+<!-- Disclaimer -->
+<div id="disclaimer-overlay">
   <div class="disclaimer-box">
     <h2>Disclaimer</h2>
-
     <p>
       This website (www.shieldlexlegal.in) is not an act of advertisement, invitation,
       inducement, solicitation of clients or work and must not be construed as an
@@ -20,70 +21,66 @@
       updates about law and important accomplishments of the firm, which is available
       publicly on internet or otherwise.
     </p>
-
     <p>
       The content on the website is not and should not be construed as legal advice.
       Readers are advised to refer to legal experts for further advise before acting
       upon it.
     </p>
-
     <p>
       The Law Firm or its Advocates are not responsible for any loss caused due to any
       inaccuracy or exclusion of any information, or interpretation thereof.
     </p>
-
     <button onclick="acceptDisclaimer()">I Agree</button>
   </div>
 </div>
 
-
-
-<!-- ===== Header ===== -->
+<!-- Header -->
 <header id="main-header">
-    <!-- ===== Top Contact Bar ===== -->
-<div class="top-bar">
-  <div class="top-bar-content">
-    <div class="contact-left">
-      <a href="tel:+919039904324">📞 +919039904324</a>
-      <a href="mailto:harshitsharma@yahoo.com">✉️ harshitsharma@yahoo.com</a>
-    </div>
-
-    <div class="contact-right">
-      <a href="https://wa.me/919039904324" target="_blank">💬 WhatsApp</a>
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <div class="contact-left">
+        <a href="tel:+919039904324">📞 +919039904324</a>
+        <a href="mailto:harshitsharma@yahoo.com">✉️ harshitsharma@yahoo.com</a>
+      </div>
+      <div class="contact-right">
+        <a href="https://wa.me/919039904324" target="_blank">💬 WhatsApp</a>
+      </div>
     </div>
   </div>
-</div>
+
   <div class="header-container">
     <div class="logo">
       <a href="https://www.shieldlexlegal.in">
         <img src="images/logo.jpeg" alt="Shield Lex Legal Law Firm">
       </a>
     </div>
-<h1> Shield Lex Legal -  सुरक्षा और मजबूती </h1>
+    <h1>Shield Lex Legal -  सुरक्षा और मजबूती</h1>
+
     <nav class="nav-menu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-        <a href="news.html">News</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
+      <a href="news.html">News</a>
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
     </nav>
+
+    <div class="hamburger">&#9776;</div>
   </div>
 </header>
 
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container hero-content">
+    <h2>सुरक्षा + शक्ति + न्याय</h2>
+    <p>Primary Symbol: </p>
+    <p>Shield (ढाल / कवच) → सुरक्षा </p>
+    <p>Scales of Justice (तराजू) → न्याय </p>
+    <p>Sword / Edge → शक्ति और कोर्ट में रणनीति </p>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h2>सुरक्षा + शक्ति + न्याय</h2>
-      <p>Primary Symbol: </p>
-      <p>Shield (ढाल / कवच) → सुरक्षा </p>
-      <p>Scales of Justice (तराजू) → न्याय </p>
-      <p>Sword / Edge → शक्ति और कोर्ट में रणनीत </p>
-    </div>
-  </section>
-
-  <!-- About -->
+ <!-- About -->
   <section id="about" class="section">
     <div class="container">
       <h2>About Us</h2>
@@ -169,32 +166,43 @@ Advocate Harshit Sharma is a well-rounded lawyer in Indore, providing services a
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Shield Lex Legal Law Firm. All Rights Reserved.</p>
-    </div>
-  </footer>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Shield Lex Legal Law Firm. All Rights Reserved.</p>
+  </div>
+</footer>
+
 <script>
-  // Sticky header on scroll
-  window.addEventListener("scroll", function () {
-    const header = document.getElementById("main-header");
-    header.classList.toggle("sticky", window.scrollY > 50);
+  // Hamburger menu smooth toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
   });
-  
+
+  // Disclaimer handling
   window.onload = function () {
     if (localStorage.getItem("disclaimerAccepted")) {
       document.getElementById("disclaimer-overlay").style.display = "none";
     } else {
-      document.body.style.overflow = "hidden"; // lock background scroll
+      document.body.style.overflow = "hidden";
     }
   };
-
+  
+  // // Sticky header on scroll
+  // window.addEventListener("scroll", function () {
+  //   const header = document.getElementById("main-header");
+  //   header.classList.toggle("sticky", window.scrollY > 50);
+  // });
+  
   function acceptDisclaimer() {
     localStorage.setItem("disclaimerAccepted", "true");
     document.getElementById("disclaimer-overlay").style.display = "none";
     document.body.style.overflow = "auto";
   }
 </script>
+
 </body>
 </html>
