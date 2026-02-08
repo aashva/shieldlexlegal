@@ -347,7 +347,7 @@ img {
   }
 
   .hero h2 {
-    font-size: 1.35em;      /* smaller heading */
+    font-size: 0.90em;      /* smaller heading */
     font-weight: 500;       /* lighter weight */
     line-height: 1.2;
     margin-bottom: 8px;
@@ -356,7 +356,7 @@ img {
   }
 
   .hero p {
-    font-size: 0.85em;      /* much smaller body text */
+    font-size: 0.65em;      /* much smaller body text */
     font-weight: 400;
     line-height: 1.4;
     margin-bottom: 6px;
