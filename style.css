@@ -42,6 +42,19 @@ a {
 .top-bar a:hover {
   text-decoration: underline;
 }
+/* ===== Sticky Header (Desktop Only) ===== */
+@media (min-width: 769px) {
+  #main-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #fff;
+  }
+
+  body:not(:has(.hero)) #main-header {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  }
+}
 
 /* ===== Header / Logo / Navigation ===== */
 #main-header {
@@ -388,4 +401,10 @@ img {
     width: 100%;
     padding: 12px;
   }
+
+  #main-header {
+    position: static;
+  }
+
+
 }
