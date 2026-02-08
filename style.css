@@ -75,6 +75,13 @@ a {
   color: #d4b36b;
 }
 
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 /* Sticky Header */
 #main-header.sticky {
   position: fixed;
@@ -95,7 +102,6 @@ a {
 }
 
 /* ===== Hero Section ===== */
-/* ===== Hero Section ===== */
 .hero {
   position: relative;
   background: url('images/justice.jpeg') no-repeat center top;
@@ -106,7 +112,6 @@ a {
   overflow: hidden;
 }
 
-/* Dark overlay for text readability */
 .hero::before {
   content: "";
   position: absolute;
@@ -120,7 +125,6 @@ a {
   z-index: 1;
 }
 
-/* Hero text container */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -141,7 +145,6 @@ a {
   line-height: 1.6;
 }
 
-/* Call-to-action buttons */
 .hero-actions a {
   display: inline-block;
   padding: 12px 22px;
@@ -164,7 +167,6 @@ a {
   opacity: 0.9;
 }
 
-/* Animation */
 @keyframes heroFade {
   from {
     opacity: 0;
@@ -173,36 +175,6 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* ===== Mobile Hero ===== */
-@media (max-width: 768px) {
-  .hero {
-    height: 320px;
-    background-position: center 25%;
-  }
-
-  .hero::before {
-    background: rgba(0, 0, 0, 0.6);
-  }
-
-  .hero-content {
-    padding: 25px 20px;
-    max-width: 100%;
-  }
-
-  .hero h2 {
-    font-size: 1.8em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .hero-actions a {
-    padding: 10px 18px;
-    margin-bottom: 10px;
   }
 }
 
@@ -326,25 +298,71 @@ img {
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 768px) {
+  /* ===== Header adjustments ===== */
+  #main-header.sticky {
+    position: static;
+    box-shadow: none;
+  }
+
   .top-bar-content,
   .header-container {
     flex-direction: column;
     text-align: center;
+    padding: 8px 10px;
+  }
+
+  .logo img {
+    max-height: 60px;
+    margin-bottom: 8px;
   }
 
   .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
     margin-top: 10px;
   }
 
   .nav-menu a {
     display: block;
-    margin: 10px 0;
+    margin: 8px 0;
+    font-size: 14px;
   }
 
-  .logo img {
-    max-height: 70px;
+  .hamburger {
+    display: block;
+    margin-top: 10px;
   }
 
+  /* Hero adjustments */
+  .hero {
+    height: 320px;
+    background-position: center 25%;
+  }
+
+  .hero::before {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-content {
+    padding: 25px 20px;
+    max-width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .hero-actions a {
+    padding: 10px 18px;
+    margin-bottom: 10px;
+  }
+
+  /* Disclaimer */
   .disclaimer-box {
     width: 95%;
     padding: 20px;
